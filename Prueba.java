@@ -36,4 +36,11 @@ public class Prueba {
 		assertEquals('1', bitset3.get(1));
 	}
 
+	// Comprobamos si al acceder fuera de los limites del array nos lanza una
+	// exception tipo BinaryStringExcepcion.
+	@Test(expected = BinaryStringExcepcion.class)
+	public void testGetOutOfLimitBit() {
+		bitset4.get(56);
+	}
+
 }

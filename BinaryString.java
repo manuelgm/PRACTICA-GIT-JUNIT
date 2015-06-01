@@ -28,9 +28,12 @@ public class BinaryString {
 	}
 
 	public char get(int index) {
-		return bits[index];
+		try {
+			return bits[index];
+		} catch (RuntimeException e) {
+			throw new BinaryStringExcepcion();
+		}
 	}
-
 	public String toString() {
 		String result = " ";
 		for (int i = 0; i < bits.length; i++) {
