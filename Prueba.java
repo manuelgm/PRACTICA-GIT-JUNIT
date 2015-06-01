@@ -50,4 +50,17 @@ public class Prueba {
 		bitset4.set(56, '0');
 	}
 
+	// Lo mismo que el apartado anterior pero utilizando un try-catch en el
+	// mismo metodo del test.
+	@Test
+	public void testSetOutOfLimitBitV2() {
+		try {
+			bitset4.set(56, '0');
+			fail("Se esperaba excepcion BinaryStringExcepcion");
+		} catch (BinaryStringExcepcion e) {
+
+		}
+
+	}
+
 }
