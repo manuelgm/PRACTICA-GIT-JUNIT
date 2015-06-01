@@ -24,7 +24,12 @@ public class BinaryString {
 	}
 
 	public void set(int index, char value) {
-		bits[index] = value;
+		try {
+				bits[index] = value;
+		} catch (RuntimeException e) {
+			throw new BinaryStringExcepcion();
+		}
+
 	}
 
 	public char get(int index) {

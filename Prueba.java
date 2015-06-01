@@ -43,4 +43,11 @@ public class Prueba {
 		bitset4.get(56);
 	}
 
+	// Lo mismo que el apartado anterior pero esta vez utilizando el metodo
+	// set().
+	@Test(expected = BinaryStringExcepcion.class)
+	public void testSetOutOfLimitBit() {
+		bitset4.set(56, '0');
+	}
+
 }
